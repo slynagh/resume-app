@@ -1,12 +1,86 @@
-import React from 'react'
+import React from 'react';
 
-function MainContentArea(){
+import Paper from '@material-ui/core/Paper';
+//import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core';
+import Divider from '@material-ui/core/Divider';
+import Button from '@material-ui/core/Button';
+
+import Content from '../components/Content';
+import Icon from '../components/Icon';
+
+// import ContentObjective from '../content/Objective';
+// import ContentWorkHistory from '../content/WorkHistory';
+// import ContentSkills from '../content/Skills';
+// import ContentEducation from '../content/Education';
+// import ContentPointsOfInterest from '../content/PointsOfInterest';
+// import ContentLinks from '../content/Links';
+// import ContentReferences from '../content/References';
+
+const useStyles = makeStyles(theme => ({
+    padded: {
+        padding: theme.spacing(3),
+    },
+    contentHeader : {    },
+    contentHeaderIcon : {    },
+    contentHeaderText : {    },
+    buttonBlock: {
+        margin: theme.spacing(3, 0, 0),
+        display: 'flex',
+    },
+    leftButton: {    },
+    rightButton: {    },
+    spacer: {
+        flexGrow: 1,
+    },
+    toolbar: theme.mixins.toolbar,
+}));
+
+function MainContentArea(props) {
+    const classes = useStyles();
+    const iconName = props.icon;
+    const contentName = props.content;
+    const title = props.title || "Title Goes Here!!";
+    const className = props.className || "";
+    const currentPageIndex = props.currentPageIndex || 0;
+    const prevItem = props.prevItem ;
+    const nextItem = props.nextItem ;
+
+    function prev(){
+        props.onPageChange(currentPageIndex - 1)
+    }
+
+    function next(){
+        props.onPageChange(currentPageIndex + 1)
+    }
+
     return (
-        <div>
-            <h2>Main Content Area</h2>
-            <p>Some awesome content which will really grab peoples' attention!</p>
-        </div>   
-    )
+        <div className={className} >
+            <div className={classes.toolbar} />
+
+            <Paper className={classes.padded}>
+                <div className={classes.contentHeader}>
+                    <Icon name={ iconName }/>
+                    <Typography className={classes.contentHeaderText} variant="h2" component="h2" gutterBottom>{title}</Typography>
+                </div>
+                <Divider />
+                <Content name={ contentName } />
+                <Divider />
+
+                <div className={classes.buttonBlock}>
+                    { prevItem && 
+                        <Button className={classes.leftButton} onClick={ prev }><Icon name="ChevronLeft" />{prevItem}</Button>
+                    }
+                    <div className={classes.spacer} />
+                    { nextItem &&
+                        <Button className={classes.rightButton} onClick={ next }>{nextItem}<Icon name="ChevronRight" /></Button>
+                    }
+                </div>
+            </Paper>
+
+        </div>
+    );
 }
 
 export default MainContentArea;
