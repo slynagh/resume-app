@@ -84,7 +84,7 @@ function App(props) {
   const classes = useStyles();
   const { container } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [currentPageIndex, setCurrentPageIndex] = useState(3);
+  const [currentPageIndex, setCurrentPageIndex] = useState(0);
 
   function update(toPageIndex){
     setCurrentPageIndex(toPageIndex);
@@ -113,7 +113,7 @@ function App(props) {
                 { keepMounted: true // Better open performance on mobile.
               } } 
             >
-              <Menu structure={ structure } currentPageIndex={ currentPageIndex } onPageChange={ update }/>
+              <Menu structure={ structure } currentPageIndex={ currentPageIndex } updateApp={ update }/>
             </Drawer>
           </Hidden>
 
@@ -127,7 +127,7 @@ function App(props) {
             >
               <div className={ classes.toolbar }/>
 
-              <Menu structure={ structure } currentPageIndex={ currentPageIndex } onPageChange={ update }/>
+              <Menu structure={ structure } currentPageIndex={ currentPageIndex } updateApp={ update }/>
             </Drawer>
           </Hidden>
         </nav>

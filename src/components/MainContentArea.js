@@ -10,14 +10,6 @@ import Button from '@material-ui/core/Button';
 import Content from '../components/Content';
 import Icon from '../components/Icon';
 
-// import ContentObjective from '../content/Objective';
-// import ContentWorkHistory from '../content/WorkHistory';
-// import ContentSkills from '../content/Skills';
-// import ContentEducation from '../content/Education';
-// import ContentPointsOfInterest from '../content/PointsOfInterest';
-// import ContentLinks from '../content/Links';
-// import ContentReferences from '../content/References';
-
 const useStyles = makeStyles(theme => ({
     padded: {
         padding: theme.spacing(3),
@@ -48,11 +40,11 @@ function MainContentArea(props) {
     const nextItem = props.nextItem ;
 
     function prev(){
-        props.onPageChange(currentPageIndex - 1)
+        props.onPageChange(currentPageIndex - 1);
     }
 
     function next(){
-        props.onPageChange(currentPageIndex + 1)
+        props.onPageChange(currentPageIndex + 1);
     }
 
     return (
@@ -68,7 +60,7 @@ function MainContentArea(props) {
                 <Content name={ contentName } />
                 <Divider />
 
-                <div className={classes.buttonBlock}>
+                <div className={ classes.buttonBlock }>
                     { prevItem && 
                         <Button className={classes.leftButton} onClick={ prev }><Icon name="ChevronLeft" />{prevItem}</Button>
                     }

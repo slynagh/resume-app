@@ -9,24 +9,28 @@ import Icon from '../components/Icon';
 function Menu(props) {
     const currentPageIndex = props.currentPageIndex;
 
+    function update(e) {
+        var key = parseInt(e.currentTarget.dataset.key);
+        if (key !== currentPageIndex && key !== null && key !== undefined){
+            props.updateApp(key);
+        }
+    }
+
     //selected={ (currentPageIndex === index) ? "true" : "false"}
     return (
         <nav>
             <List>
-                { props.structure.map((item,index) => {
-                    //console.log(index, currentPageIndex );
-                     return(
-                        <ListItem component="li" key={index} button selected={ index === currentPageIndex}>
-                        <ListItemIcon><Icon name={ item.icon } /></ListItemIcon> 
-                        <ListItemText>{ item.title }</ListItemText> 
-                        </ListItem>
-                     );
-                })
-             }
+                {props.structure.map((item, index) => (
+                    <ListItem component="li" key={index} data-key={index} button selected={index === currentPageIndex} onClick={ update }>
+                        <ListItemIcon><Icon name={item.icon} /></ListItemIcon>
+                        <ListItemText>{item.title}</ListItemText>
+                    </ListItem>
+                ))
+        }
 
-                <ListItem divider/>
+                <ListItem divider />
                 <ListItem>
-                    <ListItemIcon><IconUser/></ListItemIcon>
+                    <ListItemIcon><IconUser /></ListItemIcon>
                     <ListItemText>
                         Contact
                     </ListItemText></ListItem>
