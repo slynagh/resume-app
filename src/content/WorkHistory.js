@@ -1,4 +1,5 @@
 import React from 'react';
+import Divider from '@material-ui/core/Divider';
 
 export default function () {
     return (
@@ -39,7 +40,7 @@ ACRRM has a membership base of 5000, supporting junior doctors and medical stude
             </ul>
            
 
-            <hr />
+           <Divider />
 
             <h3>Freelance Digital Professional, stevenlynagh.com</h3>
             <h4>2006 - 2014</h4>
@@ -51,7 +52,7 @@ ACRRM has a membership base of 5000, supporting junior doctors and medical stude
                 <li>Designed and coded stevenlynagh.com and christianflynn.net</li>
             </ul>
 
-            <hr />
+            <Divider/>
 
             <h3>Animator, OSKA Software</h3>
 

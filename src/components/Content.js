@@ -7,11 +7,13 @@ import ContentEducation from '../content/Education';
 import ContentPointsOfInterest from '../content/PointsOfInterest';
 import ContentLinks from '../content/Links';
 import ContentReferences from '../content/References';
+import ContentProfessionalAcheivements from '../content/ProfessionalAchievements';
 
 function Content(props){
     const MyContent = (function() {
         switch(props.name){
             case "Objective" : return ContentObjective;
+            case "ProfessionalAchievements" : return ContentProfessionalAcheivements;
             case "WorkHistory" : return ContentWorkHistory;
             case "Skills" : return ContentSkills;
             case "Education" : return ContentEducation;

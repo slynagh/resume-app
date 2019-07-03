@@ -49,6 +49,11 @@ const structure = [
     icon: "Flag"
   },
   {
+    title : "Professional Achievements",
+    componentName : "ProfessionalAchievements",
+    icon: "Star"
+  },
+  {
     title : "Skills",
     componentName : "Skills",
     icon: "Extension"

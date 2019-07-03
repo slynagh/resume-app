@@ -10,6 +10,7 @@ import IconContacts from '@material-ui/icons/Contacts';
 import IconUser from '@material-ui/icons/AccountCircle';
 import IconChevronLeft from '@material-ui/icons/ChevronLeft';
 import IconChevronRight from '@material-ui/icons/ChevronRight';
+import IconStar from '@material-ui/icons/Star';
 
 function Icon(props) {
     const MuiIcon = ((name) => {
@@ -24,6 +25,7 @@ function Icon(props) {
             case "User" : return IconUser;
             case "ChevronLeft" : return IconChevronLeft;
             case "ChevronRight" : return IconChevronRight;
+            case "Star" : return IconStar;
             default : return IconFlag;
         }
     })(props.name);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Divider } from '@material-ui/core';
 
 export default function () {
     return (
@@ -11,6 +12,7 @@ export default function () {
 
             <p>After completing the course in Interactive Digital Media I accepted a scholarship position to complete an Advanced Diploma in Screen and Media.</p>
 
+<Divider/>
             <h3>Bachelor of Animation</h3>
 
             <h3>Griffith University - Queensland College of Art</h3>

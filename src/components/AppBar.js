@@ -55,7 +55,7 @@ function AppBar(props) {
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" className={classes.title}>
-          Steven Lynagh Resume
+          Steven Lynagh | Resume
           </Typography>
 
         <div>
