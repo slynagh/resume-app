@@ -18,6 +18,10 @@ export default function (){
             <p>GitHub</p>
             <p><a href="https://github.com/slynagh" target="_blank" rel="noopener noreferrer">https://github.com/slynagh</a></p>
             <hr/>
+
+            <p>FreeCodeCamp</p>
+            <p><a href="https://www.freecodecamp.org/stevelynagh" target="_blank" rel="noopener noreferrer">https://www.freecodecamp.org/stevelynagh</a></p>
+            
         </React.Fragment>
     )
 }

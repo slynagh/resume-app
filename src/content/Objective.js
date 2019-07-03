@@ -3,15 +3,13 @@ import React from 'react';
 export default function () {
     return (
         <React.Fragment>
-            {/* <Typography variant="h2" ><IconFlag fontSize="inherit"/>Objective</Typography> */}
             < p>
-                I am a digital creative professional looking to focus my career on front-end web and mobile development.
+            I am a digital creative professional looking to focus my career as a front-end developer.
             </p>
             <p>
-                I have a broad range of skills and experience - from animation, illustration and multimedia to IT support – which are complimentary to my strong front end fundamentals.
-            </p>
+            My main strengths are versatility and resourcefulness. I have a broad range of skills from a career which covers animation, illustration and multimedia to IT support – which are complimentary to my strong front end fundamentals. I am always happy to pick up a new tool to apply to a solution.            </p>
             <p>
-                I am especially interested in working within agile teams on challenging projects delivering innovative solutions.
+            Having recently moved to the Netherlands I'm especially interested in working with agile, test-driven teams on challenging cross platform projects, delivering innovative solutions via continuous integration techniques.
             </p>
         </React.Fragment>
     )

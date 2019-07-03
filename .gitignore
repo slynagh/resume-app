@@ -12,7 +12,7 @@
 /build
 
 # misc
-.vscode/sftp.js
+.vscode/sftp.json
 .DS_Store
 .env.local
 .env.development.local
