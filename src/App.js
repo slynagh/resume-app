@@ -42,48 +42,7 @@ const useStyles = makeStyles(theme => ({
   toolbar: theme.mixins.toolbar,
 }));
 
-const structure = [
-  {
-    title : "Objective",
-    componentName : "Objective",
-    icon: "Flag"
-  },
-  {
-    title : "Professional Achievements",
-    componentName : "ProfessionalAchievements",
-    icon: "Star"
-  },
-  {
-    title : "Skills",
-    componentName : "Skills",
-    icon: "Extension"
-  },
-  {
-    title : "Work History",
-    componentName : "WorkHistory",
-    icon: "Work"
-  },
-  {
-    title : "Education",
-    componentName : "Education",
-    icon : "School"
-  },
-  {
-    title : "Points of Interest",
-    componentName : "PointsOfInterest",
-    icon: "Info"
-  },
-  {
-    title : "Links",
-    componentName : "Links",
-    icon : "Links"
-  },
-  {
-    title : "References",
-    componentName : "References",
-    icon: "Contacts"
-  }
-]
+const structure = require("./data/structure");
 
 function App(props) {
   const classes = useStyles();
@@ -106,7 +65,7 @@ function App(props) {
 
         <AppBar position="fixed" className={ classes.appBar } />
 
-        <nav className={classes.drawer} aria-label="Mailbox folders">
+        <nav className={classes.drawer}>
           {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
           <Hidden smUp implementation="css">
             
