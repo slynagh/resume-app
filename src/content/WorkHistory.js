@@ -24,9 +24,9 @@ ACRRM has a membership base of 5000, supporting junior doctors and medical stude
             <ul>
             <li>Prototyping, template development, analytics, content publishing, quality control, front end maintenance across ACRRM websites and landing pages
                 <ul>
-                    <li><a href="https://www.acrrm.org.au" target="_blank">www.acrrm.org.au</a></li>
-                    <li><a href="https://rma.acrrm.org.au" target="_blank">rma.acrrm.org.au </a></li>
-                    <li><a href="https://www.acrrm.org.au/agpt " target="_blank">https://www.acrrm.org.au/agpt </a></li>
+                    <li><a href="https://www.acrrm.org.au" target="_blank" rel="noopener noreferrer">www.acrrm.org.au</a></li>
+                    <li><a href="https://rma.acrrm.org.au" target="_blank" rel="noopener noreferrer">rma.acrrm.org.au </a></li>
+                    <li><a href="https://www.acrrm.org.au/agpt " target="_blank" rel="noopener noreferrer">https://www.acrrm.org.au/agpt </a></li>
                 </ul>
             </li>
             <li>Working closely with Education Designers and Content Matter Experts, development and publishing of dozens of Online Learning Modules for Rural Doctors across ACRRM’s two LMS systems, totaling thousands of enrolments.</li>
