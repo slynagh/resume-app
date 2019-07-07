@@ -23,6 +23,9 @@ import { Divider } from '@material-ui/core';
 const drawerWidth = "240px";
 const structure = require("./data/structure");
 
+const initialWidth = window.innerWidth;
+console.log(initialWidth);
+
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
@@ -85,7 +88,8 @@ const useStyles = makeStyles(theme => ({
 function App(props) {
   const classes = useStyles();
   //const { container } = props;
-  const [menuOpen, setMenuOpen] = useState(false);
+
+  const [menuOpen, setMenuOpen] = useState(initialWidth > 640);
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
 
   function update(toPageIndex) {
@@ -93,7 +97,7 @@ function App(props) {
   }
 
   function handleDrawerToggle() {
-    console.log("App: handleDrawerToggle()")
+   // console.log("App: handleDrawerToggle()")
     setMenuOpen(!menuOpen);
   }
 
