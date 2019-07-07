@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import MuiAppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -18,11 +19,12 @@ const useStyles = makeStyles(theme => ({
   profileButton: {
     
   },
+  hide : {
+    display:'none',
+  },
   menuButton: {
     marginRight: '15px',
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
-    },
+    
   },
   title: {
     flexGrow: 1,
@@ -32,13 +34,19 @@ const useStyles = makeStyles(theme => ({
 function AppBar(props) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
+  const contactOpen = Boolean(anchorEl);
+  const menuOpen = props.menuOpen || false;
 
-  function handleMenu(event) {
+  function handleMenuButtonClick(){
+    //console.log("AppBar: onMenuButtonClick");
+    props.onMenuButtonClick();
+  }
+
+  function handleContactMenu(event) {
     setAnchorEl(event.currentTarget);
   }
 
-  function handleClose() {
+  function handleContactClose() {
     setAnchorEl(null);
   }
 
@@ -51,7 +59,15 @@ function AppBar(props) {
       classes={props.classes || {}}
     >
       <Toolbar>
-        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu">
+        <IconButton 
+          edge="start" 
+          className={clsx(classes.menuButton, {
+            [classes.hide]: menuOpen,
+          })}
+          color="inherit" 
+          aria-label="Menu"
+          onClick={ handleMenuButtonClick }
+        >
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" className={classes.title}>
@@ -60,9 +76,9 @@ function AppBar(props) {
 
         <div>
           <IconButton
-            aria-owns={open ? 'menu-appbar' : undefined}
+            aria-owns={contactOpen ? 'menu-appbar' : undefined}
             aria-haspopup="true"
-            onClick={handleMenu}
+            onClick={handleContactMenu}
             color="inherit"
           >
             <AccountCircle />
@@ -78,13 +94,13 @@ function AppBar(props) {
               vertical: 'top',
               horizontal: 'right',
             }}
-            open={open}
-            onClose={handleClose}
+            open={contactOpen}
+            onClose={handleContactClose}
           >
-            <MenuItem onClick={handleClose}><Link>email</Link></MenuItem>
-            <MenuItem onClick={handleClose}>LinkedIn</MenuItem>
-            <MenuItem onClick={handleClose}>GitHub</MenuItem>
-            <MenuItem onClick={handleClose}>Website</MenuItem>
+            <MenuItem onClick={handleContactClose}><Link>email</Link></MenuItem>
+            <MenuItem onClick={handleContactClose}>LinkedIn</MenuItem>
+            <MenuItem onClick={handleContactClose}>GitHub</MenuItem>
+            <MenuItem onClick={handleContactClose}>Website</MenuItem>
           </Menu>
         </div>
       </Toolbar>
