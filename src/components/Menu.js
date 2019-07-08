@@ -5,6 +5,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import IconUser from '@material-ui/icons/AccountCircle';
 import Icon from '../components/Icon';
+import Link from '@material-ui/core/Link';
 
 function Menu(props) {
     const currentPageIndex = props.currentPageIndex;
@@ -30,10 +31,12 @@ function Menu(props) {
 
                 <ListItem divider />
                 <ListItem>
+                    <Link element="a" href="mailto:stevelynagh@hotmail.com?subject=Let's work together!" rel="noopener noreferrer" target="_blank">
                     <ListItemIcon><IconUser /></ListItemIcon>
                     <ListItemText>
                         Contact
-                    </ListItemText></ListItem>
+                    </ListItemText>
+                    </Link></ListItem>
             </List>
         </nav>
     )
