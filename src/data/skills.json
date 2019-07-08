@@ -1,0 +1,92 @@
+{
+    "Web Technologies" : [
+        {
+            "name" : "HTML5",
+            "value" : 88
+        },
+        {
+            "name": "CSS",
+            "value": 95
+        },
+        {
+            "name":"JavaScript",
+            "value": 87
+        },
+        {
+            "name":"Bootstrap",
+            "value": 95
+        },
+        {
+            "name":"jQuery",
+            "value":85
+        },
+        {
+            "name" : "React",
+            "value" : 40
+        },
+        {
+            "name" : "Google Analytics",
+            "value" : 55
+        },
+        {
+            "name" : "Sitefinity CMS",
+            "value" : 60
+        },
+        {
+            "name" : "Phonegap / Cordova",
+            "value" : 50   
+        },
+        {
+            "name" : "AIR / AS3",
+            "value": 70
+        },
+        {
+            "name" : "Programming Paradigms",
+            "value" : 50
+        },
+        {
+            "name" : "Server-side Languages",
+            "value" : 25
+        }
+    ],
+    "Software" : [
+        {
+            "name" : "Photoshop",
+            "value" : 96
+        },
+        {
+            "name" : "Animate",
+            "value" : 85
+        },
+        {
+            "name" : "Illustrator",
+            "value" : 75
+        },
+        {
+            "name" : "Experience Design",
+            "value" : 40
+        },
+        {
+            "name" : "Atlassian suite including JIRA, Service Desk, Confluence, BitBucket",
+            "value" : 75 
+        },
+        {
+            "name" : "Canvas LMS",
+            "value" : 90
+        }
+    ],
+    "Other Skills" :[
+        {
+            "name" : "App and Play store release management",
+            "value" : 75
+        },
+        {
+            "name" : "E-Learning content development",
+            "value" : 80
+        },
+        {
+            "name" : "Agile techniques and tools",
+            "value" : 60
+        }
+    ]
+}
