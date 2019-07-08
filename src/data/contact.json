@@ -1,0 +1,27 @@
+[
+    {
+        "name" : "email",
+        "icon" : "Email",
+        "href" : "mailto:stevelynagh@hotmail.com"
+    },
+    {
+        "name" : "Personal Website",
+        "icon" : "Public",
+        "href" : "http://stevenlynagh.com"
+    },
+    {
+        "name" : "linkedIn",
+        "icon" : "Public",
+        "href" : "https://www.linkedin.com/in/stevenlynagh/"
+    },
+    {
+        "name" : "freeCodeCamp",
+        "icon" : "Public",
+        "href" : "https://www.freecodecamp.org/stevelynagh"
+    },
+    {
+        "name" : "GitHub",
+        "icon" : "Public",
+        "href" : "https://github.com/slynagh"
+    }
+]

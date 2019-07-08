@@ -10,6 +10,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Link from '@material-ui/core/Link';
+//import Icon from './Icon';
 //import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles(theme => ({
@@ -30,6 +31,8 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   }
 }));
+
+const contact = require("../data/contact");
 
 function AppBar(props) {
   const classes = useStyles();
@@ -97,10 +100,19 @@ function AppBar(props) {
             open={contactOpen}
             onClose={handleContactClose}
           >
-            <MenuItem onClick={handleContactClose}><Link>email</Link></MenuItem>
-            <MenuItem onClick={handleContactClose}>LinkedIn</MenuItem>
+            {contact.map((item) => ( 
+                
+                  <Link href={ item.href } target="_blank" rel="noopener noreferrer" component="a" underline="none">
+                    <MenuItem onClick={handleContactClose}>{item.name}</MenuItem>
+                  </Link>
+                
+              )
+            )}
+            {/* <MenuItem divider onClick={handleContactClose}><Link href="#">email</Link></MenuItem>
+            
+            <MenuItem onClick={handleContactClose}><a href="#">LinkedIn</a></MenuItem>
             <MenuItem onClick={handleContactClose}>GitHub</MenuItem>
-            <MenuItem onClick={handleContactClose}>Website</MenuItem>
+            <MenuItem onClick={handleContactClose}>Website</MenuItem> */}
           </Menu>
         </div>
       </Toolbar>

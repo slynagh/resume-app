@@ -48,7 +48,6 @@ const useStyles = makeStyles(theme => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
-    
   },
   drawerOpen: {
     width: drawerWidth,
@@ -132,8 +131,7 @@ function App(props) {
           open={menuOpen}
         >
           <div className={classes.toolbar}>
-            <IconButton onClick={handleDrawerToggle} 
-            >
+            <IconButton onClick={handleDrawerToggle} >
               <Icon name="ChevronLeft" />
             </IconButton>
           </div>
