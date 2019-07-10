@@ -25,7 +25,10 @@ function Content(props){
     })();
 
     return(
-        <MyContent {...props} />
+        <div {...props}>
+            <MyContent/>
+        </div>
+       
     );
 }
 

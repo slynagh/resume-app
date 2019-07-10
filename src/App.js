@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import clsx from 'clsx';
 
 //Material Components
@@ -24,7 +24,6 @@ const drawerWidth = "240px";
 const structure = require("./data/structure");
 
 const initialWidth = window.innerWidth;
-console.log(initialWidth);
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -101,7 +100,7 @@ function App(props) {
   }
 
   return (
-    <React.Fragment>
+    <Fragment>
       <CssBaseline />
       <div className={classes.root}>
 
@@ -153,7 +152,7 @@ function App(props) {
         />
 
       </div>
-    </React.Fragment>
+    </Fragment>
   );
 }
 
