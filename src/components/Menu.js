@@ -17,7 +17,10 @@ function Menu(props) {
         }
     }
 
-    //selected={ (currentPageIndex === index) ? "true" : "false"}
+    function onContactClick(){
+        window.open("mailto:stevelynagh@hotmail.com?subject=Let's work together!", "_blank");
+    }
+
     return (
         <nav>
             <List>
@@ -30,13 +33,13 @@ function Menu(props) {
         }
 
                 <ListItem divider />
-                <ListItem>
-                    <Link element="a" href="mailto:stevelynagh@hotmail.com?subject=Let's work together!" rel="noopener noreferrer" target="_blank">
+                <ListItem component="li" key={props.structure.length} button onClick={onContactClick}>
+                    {/* <Link element="a" href="mailto:stevelynagh@hotmail.com?subject=Let's work together!" rel="noopener noreferrer" target="_blank"> */}
                     <ListItemIcon><IconUser /></ListItemIcon>
                     <ListItemText>
                         Contact
                     </ListItemText>
-                    </Link></ListItem>
+                    </ListItem>
             </List>
         </nav>
     )
