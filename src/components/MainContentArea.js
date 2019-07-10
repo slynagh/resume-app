@@ -13,6 +13,7 @@ import Icon from '../components/Icon';
 const useStyles = makeStyles(theme => ({
     content : {
         fontWeight: 300,
+        fontSize : '1rem',
     },
     padded: {
         padding: theme.spacing(3),
