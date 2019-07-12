@@ -3,10 +3,8 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-//import IconUser from '@material-ui/icons/AccountCircle';
 import Icon from '../components/Icon';
 import MuiIcon from '@material-ui/core/Icon';
-//import Link from '@material-ui/core/Link';
 
 function Menu(props) {
     const currentPageIndex = props.currentPageIndex;
