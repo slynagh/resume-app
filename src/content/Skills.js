@@ -7,7 +7,7 @@ const skills = require('../data/skills');
 const progressSize = 64;
 
 const useStyles = makeStyles(theme => ({
-    skillColumn:{
+    skillColumn: {
         flexGrow: 1
     },
     skillItem: {
@@ -31,11 +31,11 @@ const useStyles = makeStyles(theme => ({
 
 function Skills(props) {
     const classes = useStyles();
-    const [ skillValues, updateSkillValues ] = useState(
+    const [skillValues, updateSkillValues] = useState(
         [
-            skills["Web Technologies"].map( ()=> 0 ),
-            skills["Software"].map( ()=> 0 ),
-            skills["Other Skills"].map( ()=> 0)
+            skills["Web Technologies"].map(() => 0),
+            skills["Software"].map(() => 0),
+            skills["Other Skills"].map(() => 0)
         ]);
 
     // function setValue(el, value) {
@@ -44,7 +44,7 @@ function Skills(props) {
 
     useEffect(function () {
         console.log("moo");
-        setTimeout(function(){
+        setTimeout(function () {
             updateSkillValues(
                 [
                     skills["Web Technologies"].map(item => item.value),
@@ -53,14 +53,14 @@ function Skills(props) {
                 ]
             )
         }, 100)
-        
+
     }, [])
 
     return (
         <Fragment>
 
-            <Grid container spacing={3}>
-                <Grid item md={6} className={classes.skillColumn}>
+            <Grid container spacing={3} alignItems="flex-start">
+                <Grid item md={6} lg={4} className={classes.skillColumn}>
                     <List >
                         <h3>Web Technologies</h3>
                         {skills["Web Technologies"].map((item, index) => {
@@ -81,7 +81,7 @@ function Skills(props) {
                                             size={progressSize}
                                             thickness={6}
                                             value={skillValues[0][index]}
-                                           // data-value={item.value}
+                                        // data-value={item.value}
                                         />
                                     </div>
                                     <ListItemText className="skillName">{item.name}</ListItemText>
@@ -90,64 +90,68 @@ function Skills(props) {
                         })}
                     </List>
                 </Grid>
-                <Grid item md={6} className={classes.skillColumn}>
-                    <List>
-                        <h3>Software</h3>
-                        {skills["Software"].map((item, index) => {
-                            skillValues[1].push(0);
-                            return (
-                                <ListItem divider key={index}>
-                                    <div className={classes.progress}>
-                                        <CircularProgress
-                                            className={classes.progressBG}
-                                            variant="static"
-                                            size={progressSize}
-                                            thickness={6}
-                                            value={100}
-                                        />
-                                        <CircularProgress
-                                            className={classes.progressOL}
-                                            variant="static"
-                                            size={progressSize}
-                                            thickness={6}
-                                            value={skillValues[1][index]}
-                                           // data-value={item.value}
-                                        />
-                                    </div>
-                                    <ListItemText className="skillName">{item.name}</ListItemText>
-                                </ListItem>
-                            )
-                        })}</List>
-
-                    <List>
-                        <h3>Other Skills</h3>
-                        {skills["Other Skills"].map((item, index) => {
-                            skillValues[2].push(0);
-                            return (
-                                <ListItem divider key={index}>
-                                    <div className={classes.progress}>
-                                        <CircularProgress
-                                            className={classes.progressBG}
-                                            variant="static"
-                                            size={progressSize}
-                                            thickness={6}
-                                            value={100}
-                                        />
-                                        <CircularProgress
-                                            className={classes.progressOL}
-                                            variant="static"
-                                            size={progressSize}
-                                            thickness={6}
-                                            value={skillValues[2][index]}
+                <Grid item container md={6} lg={8} spacing={3}>
+                    <Grid item md={12} lg={6} className={classes.skillColumn}>
+                        <List>
+                            <h3>Software</h3>
+                            {skills["Software"].map((item, index) => {
+                                skillValues[1].push(0);
+                                return (
+                                    <ListItem divider key={index}>
+                                        <div className={classes.progress}>
+                                            <CircularProgress
+                                                className={classes.progressBG}
+                                                variant="static"
+                                                size={progressSize}
+                                                thickness={6}
+                                                value={100}
+                                            />
+                                            <CircularProgress
+                                                className={classes.progressOL}
+                                                variant="static"
+                                                size={progressSize}
+                                                thickness={6}
+                                                value={skillValues[1][index]}
+                                            // data-value={item.value}
+                                            />
+                                        </div>
+                                        <ListItemText className="skillName">{item.name}</ListItemText>
+                                    </ListItem>
+                                )
+                            })}</List>
+                    </Grid>
+                    <Grid item md={12} lg={6} className={classes.skillColumn}>
+                        <List>
+                            <h3>Other Skills</h3>
+                            {skills["Other Skills"].map((item, index) => {
+                                skillValues[2].push(0);
+                                return (
+                                    <ListItem divider key={index}>
+                                        <div className={classes.progress}>
+                                            <CircularProgress
+                                                className={classes.progressBG}
+                                                variant="static"
+                                                size={progressSize}
+                                                thickness={6}
+                                                value={100}
+                                            />
+                                            <CircularProgress
+                                                className={classes.progressOL}
+                                                variant="static"
+                                                size={progressSize}
+                                                thickness={6}
+                                                value={skillValues[2][index]}
                                             //data-value={item.value}
-                                        />
-                                    </div>
-                                    <ListItemText className="skillName">{item.name}</ListItemText>
-                                </ListItem>
-                            )
-                        })}
-                    </List>
+                                            />
+                                        </div>
+                                        <ListItemText className="skillName">{item.name}</ListItemText>
+                                    </ListItem>
+                                )
+                            })}
+                        </List>
+                    </Grid>
                 </Grid>
+
             </Grid>
 
 
