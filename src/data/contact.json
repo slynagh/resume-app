@@ -1,27 +1,50 @@
 [
     {
         "name" : "email",
-        "icon" : "Email",
+        "icon" : {
+            "useFont" : false,
+            "name" : "Email"
+        },
         "href" : "mailto:stevelynagh@hotmail.com"
     },
     {
-        "name" : "Personal Website",
-        "icon" : "Public",
+        "name" : "Personal website",
+        "icon" : {
+            "useFont" : false,
+            "name" :  "Public"
+        },
         "href" : "http://stevenlynagh.com"
     },
     {
         "name" : "linkedIn",
-        "icon" : "Public",
+        "icon" : {
+            "useFont": true,
+            "name" : "icon-linkedin"
+        },
         "href" : "https://www.linkedin.com/in/stevenlynagh/"
     },
     {
         "name" : "freeCodeCamp",
-        "icon" : "Public",
+        "icon" : {
+            "useFont": true,
+            "name" : "icon-free-code-camp"       
+        },
         "href" : "https://www.freecodecamp.org/stevelynagh"
     },
     {
         "name" : "GitHub",
-        "icon" : "Public",
+        "icon" : {
+            "useFont" : true,
+            "name" : "icon-github"
+        },
         "href" : "https://github.com/slynagh"
+    },
+    {
+        "name" : "StackOverflow",
+        "icon" : {
+            "useFont" : true,
+            "name" : "icon-stackoverflow"
+        },
+        "href" : "https://stackoverflow.com/story/slynagh"
     }
 ]

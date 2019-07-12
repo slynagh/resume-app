@@ -3,8 +3,9 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import IconUser from '@material-ui/icons/AccountCircle';
+//import IconUser from '@material-ui/icons/AccountCircle';
 import Icon from '../components/Icon';
+import MuiIcon from '@material-ui/core/Icon';
 //import Link from '@material-ui/core/Link';
 
 function Menu(props) {
@@ -18,6 +19,10 @@ function Menu(props) {
     }
 
     function onContactClick(){
+        window.open("mailto:stevelynagh@hotmail.com?subject=Let's work together!", "_blank");
+    }
+
+    function onSourceCodeClick(){
         window.open("mailto:stevelynagh@hotmail.com?subject=Let's work together!", "_blank");
     }
 
@@ -35,11 +40,16 @@ function Menu(props) {
                 <ListItem divider />
                 <ListItem component="li" key={props.structure.length} button onClick={onContactClick}>
                     {/* <Link element="a" href="mailto:stevelynagh@hotmail.com?subject=Let's work together!" rel="noopener noreferrer" target="_blank"> */}
-                    <ListItemIcon><IconUser /></ListItemIcon>
+                    <ListItemIcon><Icon name="Email" /></ListItemIcon>
                     <ListItemText>
-                        Contact
+                        Email me!
                     </ListItemText>
                     </ListItem>
+                    <ListItem component="li" key={props.structure.length+1} button onClick={
+                        onSourceCodeClick }>
+                            <ListItemIcon><MuiIcon className="icon-embed2 overflow-visible" /></ListItemIcon>
+                            <ListItemText>View source on GitHub</ListItemText>
+                        </ListItem>
             </List>
         </nav>
     )

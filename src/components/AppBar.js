@@ -10,6 +10,9 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Link from '@material-ui/core/Link';
+import FontIcon from '@material-ui/core/Icon';
+import Icon from '../components/Icon';
+import { ListItemIcon } from '@material-ui/core';
 //import Icon from './Icon';
 //import Container from '@material-ui/core/Container';
 
@@ -18,14 +21,14 @@ const useStyles = makeStyles(theme => ({
   //   flexGrow: 1,
   // },
   profileButton: {
-    
+
   },
-  hide : {
-    display:'none',
+  hide: {
+    display: 'none',
   },
   menuButton: {
     marginRight: '15px',
-    
+
   },
   title: {
     flexGrow: 1,
@@ -40,7 +43,7 @@ function AppBar(props) {
   const contactOpen = Boolean(anchorEl);
   const menuOpen = props.menuOpen || false;
 
-  function handleMenuButtonClick(){
+  function handleMenuButtonClick() {
     //console.log("AppBar: onMenuButtonClick");
     props.onMenuButtonClick();
   }
@@ -53,6 +56,10 @@ function AppBar(props) {
     setAnchorEl(null);
   }
 
+  function handleMenuItemClick(e){
+    window.open(e.currentTarget.dataset.href, "_blank");
+  }
+
   return (
 
     <MuiAppBar
@@ -62,14 +69,14 @@ function AppBar(props) {
       classes={props.classes || {}}
     >
       <Toolbar>
-        <IconButton 
-          edge="start" 
+        <IconButton
+          edge="start"
           className={clsx(classes.menuButton, {
             [classes.hide]: menuOpen,
           })}
-          color="inherit" 
+          color="inherit"
           aria-label="Menu"
-          onClick={ handleMenuButtonClick }
+          onClick={handleMenuButtonClick}
         >
           <MenuIcon />
         </IconButton>
@@ -100,13 +107,24 @@ function AppBar(props) {
             open={contactOpen}
             onClose={handleContactClose}
           >
-            {contact.map((item, index) => ( 
+            My online profiles:
+            {contact.map((item, index) => (
+
+              <MenuItem onClick={handleMenuItemClick} key={index} data-href={item.href}>
                 
-                  <Link key={index} href={ item.href } target="_blank" rel="noopener noreferrer" component="a" underline="none">
-                    <MenuItem onClick={handleContactClose}>{item.name}</MenuItem>
-                  </Link>
-                
-              )
+                  <ListItemIcon>
+                    {
+                      item.icon.useFont ?
+                        <FontIcon className={item.icon.name + " overflow-visible"} />
+                        :
+                        <Icon name={item.icon.name} />
+                    }
+                  </ListItemIcon>
+                  
+
+                  {item.name}</MenuItem>
+
+            )
             )}
             {/* <MenuItem divider onClick={handleContactClose}><Link href="#">email</Link></MenuItem>
             
