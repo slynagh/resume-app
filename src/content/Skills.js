@@ -1,52 +1,158 @@
-import React from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 
-export default function (props) {
+import { Grid, CircularProgress, List, ListItem, ListItemText } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+
+const skills = require('../data/skills');
+const progressSize = 64;
+
+const useStyles = makeStyles(theme => ({
+    skillColumn:{
+        flexGrow: 1
+    },
+    skillItem: {
+        margin: theme.spacing(3, 0),
+        width: '100%',
+    },
+    progress: {
+        position: "relative",
+        width: progressSize,
+        height: progressSize,
+        marginRight: theme.spacing(3)
+    },
+    progressBG: {
+        position: "absolute",
+        color: "#eee"
+    },
+    progressOL: {
+        position: "absolute"
+    }
+}));
+
+function Skills(props) {
+    const classes = useStyles();
+    const [ skillValues, updateSkillValues ] = useState(
+        [
+            skills["Web Technologies"].map( ()=> 0 ),
+            skills["Software"].map( ()=> 0 ),
+            skills["Other Skills"].map( ()=> 0)
+        ]);
+
+    // function setValue(el, value) {
+    //     el.value = value;
+    // }
+
+    useEffect(function () {
+        console.log("moo");
+        setTimeout(function(){
+            updateSkillValues(
+                [
+                    skills["Web Technologies"].map(item => item.value),
+                    skills["Software"].map(item => item.value),
+                    skills["Other Skills"].map(item => item.value)
+                ]
+            )
+        }, 100)
+        
+    }, [])
+
     return (
-        <React.Fragment>
-            <h3>Web Technologies</h3>
-            <ul>
+        <Fragment>
 
-                <li>HTML5 / CSS / JavaScript (ES6)</li>
-                <li>Bootstrap (3 &amp; 4)</li>
-                
-                <li>GIT</li>
-                
-                <li>React</li>
-                <li>Google Analytics &amp; Tag Manager</li>
-                <li>Managed CSS approaches including BEM, OOCSS, SASS</li>
-                <li>jQuery / jQuery UI / jQuery Mobile</li>
-                
-                <li>Sitefinity CMS</li>
-                <li>PhoneGap / Cordova</li>
+            <Grid container spacing={3}>
+                <Grid item md={6} className={classes.skillColumn}>
+                    <List >
+                        <h3>Web Technologies</h3>
+                        {skills["Web Technologies"].map((item, index) => {
+                            skillValues[0].push(0);
+                            return (
+                                <ListItem divider key={index}>
+                                    <div className={classes.progress}>
+                                        <CircularProgress
+                                            className={classes.progressBG}
+                                            variant="static"
+                                            size={progressSize}
+                                            thickness={6}
+                                            value={100}
+                                        />
+                                        <CircularProgress
+                                            className={classes.progressOL}
+                                            variant="static"
+                                            size={progressSize}
+                                            thickness={6}
+                                            value={skillValues[0][index]}
+                                           // data-value={item.value}
+                                        />
+                                    </div>
+                                    <ListItemText className="skillName">{item.name}</ListItemText>
+                                </ListItem>
+                            )
+                        })}
+                    </List>
+                </Grid>
+                <Grid item md={6} className={classes.skillColumn}>
+                    <List>
+                        <h3>Software</h3>
+                        {skills["Software"].map((item, index) => {
+                            skillValues[1].push(0);
+                            return (
+                                <ListItem divider key={index}>
+                                    <div className={classes.progress}>
+                                        <CircularProgress
+                                            className={classes.progressBG}
+                                            variant="static"
+                                            size={progressSize}
+                                            thickness={6}
+                                            value={100}
+                                        />
+                                        <CircularProgress
+                                            className={classes.progressOL}
+                                            variant="static"
+                                            size={progressSize}
+                                            thickness={6}
+                                            value={skillValues[1][index]}
+                                           // data-value={item.value}
+                                        />
+                                    </div>
+                                    <ListItemText className="skillName">{item.name}</ListItemText>
+                                </ListItem>
+                            )
+                        })}</List>
 
-                <li>Object Oriented / Functional programming paradigms</li>
-                <li>AS3 / AIR </li>
-                <li>Functional level of server-side languages including PHP, SQL, .NET</li>
+                    <List>
+                        <h3>Other Skills</h3>
+                        {skills["Other Skills"].map((item, index) => {
+                            skillValues[2].push(0);
+                            return (
+                                <ListItem divider key={index}>
+                                    <div className={classes.progress}>
+                                        <CircularProgress
+                                            className={classes.progressBG}
+                                            variant="static"
+                                            size={progressSize}
+                                            thickness={6}
+                                            value={100}
+                                        />
+                                        <CircularProgress
+                                            className={classes.progressOL}
+                                            variant="static"
+                                            size={progressSize}
+                                            thickness={6}
+                                            value={skillValues[2][index]}
+                                            //data-value={item.value}
+                                        />
+                                    </div>
+                                    <ListItemText className="skillName">{item.name}</ListItemText>
+                                </ListItem>
+                            )
+                        })}
+                    </List>
+                </Grid>
+            </Grid>
 
 
-            </ul>
-
-            <h3>Software</h3>
-
-            <ul>
-                <li>Advanced skills in Adobe Creative Cloud suite including
-                    <ul>
-                        <li>Photoshop</li>
-                        <li>XD</li>
-                        <li>Animate</li>
-                        <li>Illustrator</li>
-                    </ul>
-                </li>
-                <li>Atlassian suite including: JIRA, Service Desk, Confluence, BitBucket</li>
-                <li>Canvas LMS</li>
-            </ul>
-
-            <h3>Other Skills</h3>
-            <ul>
-                <li>App and Play store release management</li>
-                <li>E-Learning content development</li>
-                <li>Agile techniques and tools</li>
-            </ul>
-        </React.Fragment>
+        </Fragment>
     )
 }
+
+export default Skills;

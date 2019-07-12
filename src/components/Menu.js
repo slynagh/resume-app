@@ -5,7 +5,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import IconUser from '@material-ui/icons/AccountCircle';
 import Icon from '../components/Icon';
-import Link from '@material-ui/core/Link';
+//import Link from '@material-ui/core/Link';
 
 function Menu(props) {
     const currentPageIndex = props.currentPageIndex;

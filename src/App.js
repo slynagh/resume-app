@@ -3,10 +3,12 @@ import clsx from 'clsx';
 
 //Material Components
 import Drawer from '@material-ui/core/Drawer';
-import CssBaseline from '@material-ui/core/CssBaseline';
+
+import { 
+  CssBaseline, 
+  Divider, 
+  IconButton } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
-//import Hidden from '@material-ui/core/Hidden';
 
 //Custom Components
 import Icon from './components/Icon';
@@ -18,7 +20,6 @@ import Menu from './components/Menu';
 //css
 import './css/App.css';
 import './css/fonts.css';
-import { Divider } from '@material-ui/core';
 
 const drawerWidth = "240px";
 const structure = require("./data/structure");
@@ -63,9 +64,6 @@ const useStyles = makeStyles(theme => ({
     overflowX: 'hidden',
     width: theme.spacing(7) + 1,
     whiteSpace: 'nowrap',
-    // [theme.breakpoints.up('sm')]: {
-    //   width: theme.spacing(9) + 1,
-    // },
   },
   drawerPaper: {
     width: drawerWidth,
@@ -74,7 +72,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
-  toolbar: { 
+  toolbar: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',

@@ -100,9 +100,9 @@ function AppBar(props) {
             open={contactOpen}
             onClose={handleContactClose}
           >
-            {contact.map((item) => ( 
+            {contact.map((item, index) => ( 
                 
-                  <Link href={ item.href } target="_blank" rel="noopener noreferrer" component="a" underline="none">
+                  <Link key={index} href={ item.href } target="_blank" rel="noopener noreferrer" component="a" underline="none">
                     <MenuItem onClick={handleContactClose}>{item.name}</MenuItem>
                   </Link>
                 

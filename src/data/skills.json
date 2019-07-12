@@ -9,8 +9,8 @@
             "value": 95
         },
         {
-            "name":"JavaScript",
-            "value": 87
+            "name":"ES6 JavaScript",
+            "value": 90
         },
         {
             "name":"Bootstrap",
@@ -22,7 +22,11 @@
         },
         {
             "name" : "React",
-            "value" : 40
+            "value" : 61
+        },
+        {
+            "name" : "GIT",
+            "value" : 38
         },
         {
             "name" : "Google Analytics",
@@ -38,7 +42,7 @@
         },
         {
             "name" : "AIR / AS3",
-            "value": 70
+            "value": 60
         },
         {
             "name" : "Programming Paradigms",
@@ -63,7 +67,7 @@
             "value" : 75
         },
         {
-            "name" : "Experience Design",
+            "name" : "XD Experience Design",
             "value" : 40
         },
         {
