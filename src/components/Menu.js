@@ -23,7 +23,7 @@ function Menu(props) {
     }
 
     function onSourceCodeClick(){
-        window.open("mailto:stevelynagh@hotmail.com?subject=Let's work together!", "_blank");
+        window.open("https://github.com/slynagh/resume-app", "_blank");
     }
 
     return (
