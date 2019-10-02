@@ -12,7 +12,7 @@ import ContentProfessionalAcheivements from '../content/ProfessionalAchievements
 function Content(props){
     const MyContent = (function() {
         switch(props.name){
-            case "Objective" : return ContentObjective;
+            case "Summary" : return ContentObjective;
             case "ProfessionalAchievements" : return ContentProfessionalAcheivements;
             case "WorkHistory" : return ContentWorkHistory;
             case "Skills" : return ContentSkills;

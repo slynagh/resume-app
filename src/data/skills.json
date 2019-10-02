@@ -1,16 +1,16 @@
 {
     "Web Technologies" : [
         {
+            "name":"JavaScript (ES6)",
+            "value": 90
+        },
+        {
             "name" : "HTML5",
             "value" : 88
         },
         {
-            "name": "CSS",
+            "name": "CSS (Sass, BEM)",
             "value": 95
-        },
-        {
-            "name":"ES6 JavaScript",
-            "value": 90
         },
         {
             "name":"Bootstrap",
