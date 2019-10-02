@@ -11,7 +11,7 @@
         "name" : "Personal website",
         "icon" : {
             "useFont" : false,
-            "name" :  "Public"
+            "name" :  "Web"
         },
         "href" : "http://stevenlynagh.com"
     },
@@ -22,14 +22,6 @@
             "name" : "icon-linkedin"
         },
         "href" : "https://www.linkedin.com/in/stevenlynagh/"
-    },
-    {
-        "name" : "freeCodeCamp",
-        "icon" : {
-            "useFont": true,
-            "name" : "icon-free-code-camp"       
-        },
-        "href" : "https://www.freecodecamp.org/stevelynagh"
     },
     {
         "name" : "GitHub",
@@ -46,5 +38,13 @@
             "name" : "icon-stackoverflow"
         },
         "href" : "https://stackoverflow.com/story/slynagh"
+    },
+    {
+        "name" : "freeCodeCamp",
+        "icon" : {
+            "useFont": true,
+            "name" : "icon-free-code-camp"       
+        },
+        "href" : "https://www.freecodecamp.org/stevelynagh"
     }
 ]
