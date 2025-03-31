@@ -1,6 +1,6 @@
 [
     {
-      "title" : "Summary",
+      "title" : "Objective",
       "componentName" : "Objective",
       "icon": "Flag"
     },
@@ -15,7 +15,7 @@
       "icon": "Extension"
     },
     {
-      "title" : "Work History",
+      "title" : "Experience",
       "componentName" : "WorkHistory",
       "icon": "Work"
     },

@@ -1,9 +1,3 @@
-import React from 'react';
+const References = () => <p>References available upon request</p>;
 
-export default function () {
-    return (
-        <React.Fragment>
-            <p>References available upon request</p>
-        </React.Fragment>
-    );
-}
+export default References;

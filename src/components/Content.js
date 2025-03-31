@@ -1,35 +1,41 @@
-import React from 'react';
+import Objective from "../content/Objective";
+import ContentWorkHistory from "../content/WorkHistory";
+import ContentSkills from "../content/Skills";
+import ContentEducation from "../content/Education";
+import ContentPointsOfInterest from "../content/PointsOfInterest";
+import ContentLinks from "../content/Links";
+import ContentReferences from "../content/References";
+import ContentProfessionalAcheivements from "../content/ProfessionalAchievements";
 
-import ContentObjective from '../content/Objective';
-import ContentWorkHistory from '../content/WorkHistory';
-import ContentSkills from '../content/Skills';
-import ContentEducation from '../content/Education';
-import ContentPointsOfInterest from '../content/PointsOfInterest';
-import ContentLinks from '../content/Links';
-import ContentReferences from '../content/References';
-import ContentProfessionalAcheivements from '../content/ProfessionalAchievements';
+function Content(props) {
+  const MyContent = (function () {
+    switch (props.name) {
+      case "Summary":
+        return Objective;
+      case "ProfessionalAchievements":
+        return ContentProfessionalAcheivements;
+      case "WorkHistory":
+        return ContentWorkHistory;
+      case "Skills":
+        return ContentSkills;
+      case "Education":
+        return ContentEducation;
+      case "PointsOfInterest":
+        return ContentPointsOfInterest;
+      case "Links":
+        return ContentLinks;
+      case "References":
+        return ContentReferences;
+      default:
+        return Objective;
+    }
+  })();
 
-function Content(props){
-    const MyContent = (function() {
-        switch(props.name){
-            case "Summary" : return ContentObjective;
-            case "ProfessionalAchievements" : return ContentProfessionalAcheivements;
-            case "WorkHistory" : return ContentWorkHistory;
-            case "Skills" : return ContentSkills;
-            case "Education" : return ContentEducation;
-            case "PointsOfInterest" : return ContentPointsOfInterest;
-            case "Links" : return ContentLinks;
-            case "References" : return ContentReferences;
-            default : return ContentObjective;
-        }
-    })();
-
-    return(
-        <div {...props}>
-            <MyContent/>
-        </div>
-       
-    );
+  return (
+    <div {...props}>
+      <MyContent />
+    </div>
+  );
 }
 
 export default Content;

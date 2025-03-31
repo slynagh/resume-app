@@ -1,11 +1,21 @@
-import React from 'react';
+const PointsOfInterest = () => (
+  <>
+    <p>
+      I’m a passionate software engineer with a strong focus on web development
+      and cloud technologies. I have a keen interest in DevOps, CI/CD, and
+      automation.
+    </p>
 
- export default function () {
-    return (
-        <React.Fragment>
-            <p>I have a passion for music and have played drums and guitar in many bands over the years. I still occasionally play drums for Brisbane cult rock legends Giants of Science, with whom I’ve written and recorded 3 albums, 4 EPs, and toured Australia countless times.</p>
+    <p>
+      I’m also interested in the latest trends in web development, including
+      React, Node.js, and serverless architectures.
+    </p>
 
-            <p>I’m a Dad to 2 beautiful girls. I love travelling, good food, cricket and coffee.</p>
-        </React.Fragment>
-    );
-}
+    <p>
+      In my spare time, I enjoy contributing to open source projects and
+      learning new technologies.
+    </p>
+  </>
+);
+
+export default PointsOfInterest;

@@ -1,12 +1,18 @@
-import React from 'react';
+const Objective = () => (
+  <>
+    <p>
+      A UX Engineer with a background in visual arts, I have over 10 years’
+      experience with the front end of the web.{" "}
+    </p>
 
-export default function () {
-    return (
-        <React.Fragment>
-            <p>Hello!</p>
-            <p>A Front End / Multimedia developer with background in visual arts, I have 5 years’ experience working with front end technologies as Web/Multimedia publisher for Australian College of Rural and Remote Medicine (ACRRM), in addition to extensive experience as a freelance digital illustrator and designer.</p>
+    <p>
+      A creative problem solver and constant learner, I place the highest value
+      on user experience and industry best practices, always with a critical eye
+      for design. I’m especially interested in engineering well-documented,
+      accessible UI interfaces and Design Systems while working with talented
+      people who value quality, collaboration and critical thinking.
+    </p>
+  </>
+);
 
-            <p>A creative problem solver and constant learner, I place the highest value on user experience and industry best practices, always with a critical eye for design. I'm especially interested in working with agile, test-driven teams on user-focused cross-platform projects, delivering innovative solutions via continuous integration techniques.</p>
-        </React.Fragment>
-    )
-};
+export default Objective;
