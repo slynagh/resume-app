@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
 }));
 
-function getContentComponent(title) {
+const Content = ({ title }) => {
   console.log("getContentComponent", title);
   switch (title) {
     case "Objective":
@@ -68,7 +68,7 @@ function getContentComponent(title) {
     default:
       return <Objective />;
   }
-}
+};
 
 function Main({
   icon,
@@ -98,7 +98,9 @@ function Main({
           </Typography>
         </div>
         <Divider />
-        <div className={classes.content}>{getContentComponent(title)}</div>
+        <div className={classes.content}>
+          <Content title={title} />
+        </div>
         <Divider />
 
         <div className={classes.buttonBlock}>
