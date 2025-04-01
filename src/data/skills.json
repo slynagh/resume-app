@@ -1,96 +1,124 @@
-{
-    "Web Technologies" : [
-        {
-            "name":"JavaScript",
-            "value": 90
-        },
-        {
-            "name" : "HTML5",
-            "value" : 88
-        },
-        {
-            "name": "CSS (Sass, BEM)",
-            "value": 95
-        },
-        {
-            "name":"Bootstrap",
-            "value": 95
-        },
-        {
-            "name":"jQuery",
-            "value":85
-        },
-        {
-            "name" : "React",
-            "value" : 61
-        },
-        {
-            "name" : "GIT",
-            "value" : 38
-        },
-        {
-            "name" : "Google Analytics",
-            "value" : 55
-        },
-        {
-            "name" : "Sitefinity CMS",
-            "value" : 60
-        },
-        {
-            "name" : "Phonegap / Cordova",
-            "value" : 50   
-        },
-        {
-            "name" : "AIR / AS3",
-            "value": 60
-        },
-        {
-            "name" : "Programming Paradigms",
-            "value" : 50
-        },
-        {
-            "name" : "Server-side Languages",
-            "value" : 25
-        }
-    ],
-    "Software" : [
-        {
-            "name" : "Photoshop",
-            "value" : 96
-        },
-        {
-            "name" : "Animate",
-            "value" : 85
-        },
-        {
-            "name" : "Illustrator",
-            "value" : 75
-        },
-        {
-            "name" : "XD Experience Design",
-            "value" : 40
-        },
-        {
-            "name" : "Atlassian suite including JIRA, Service Desk, Confluence, BitBucket",
-            "value" : 75 
-        },
-        {
-            "name" : "Canvas LMS",
-            "value" : 90
-        }
-    ],
-    "Other Skills" :[
-        {
-            "name" : "App and Play store release management",
-            "value" : 75
-        },
-        {
-            "name" : "E-Learning content development",
-            "value" : 80
-        },
-        {
-            "name" : "Agile techniques and tools",
-            "value" : 60
+[
+  {
+    "name": "Web Technologies",
+    "skills": [
+      {
+        "name": "HTML5",
+        "value": 95
+      },
+      {
+        "name": "CSS",
+        "value": 95
+      },
+      {
+        "name": "JavaScript",
+        "value": 90
+      },
+      {
+        "name": "TypeScript",
+        "value": 80
+      },
+      {
+        "name": "React",
+        "value": 80
+      },
+      {
+        "name": "jQuery",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "name": "UX Principles",
+    "skills":  [
+      {
+        "name": "Responsive Design",
+        "value": 95
+      },
+      {
+        "name": "Design Systems",
+        "value": 90
+      },
+      
+      {
+        "name": "Accessibility",
+        "value": 80
+      }
+    ]
+  },
+  {
+    "name": "Software practices",
+    "skills": [
+      {
+        "name": "Agile methodologies",
+        "value": 90
+      },
+      {
+        "name": "CI/CD and automated testing",
+        "value": 80
+      },
+      {
+        "name": "Object Oriented Programming",
+        "value": 75
+      },
+      {
+        "name": "API integration",
+        "value": 70
+      },
+      {
+          "name": "GIT",
+          "value": 60
         }
     ]
-}
+  },
+  {
+    "name": "Tools",
+    "skills":  [
+      {
+        "name": "Mendix Platform",
+        "value": 80
+      },
+      {
+        "name": "Figma",
+        "value": 75
+      },
+      {
+        "name": "Atlassian suite (JIRA, Confluence)",
+        "value": 75
+      },
+      {
+        "name": "Adobe Creative Suite (Photoshop, Illustrator, Animate)",
+        "value": 75
+      },
+      {
+        "name": "Canvas LMS",
+        "value": 65
+      },
+      {
+        "name": "Sitefinity CMS",
+        "value": 60
+      }
+    ]
+  },
+  {
+    "name": "Other Skills",
+    "skills": [
+      {
+        "name": "Technical Documentation",
+        "value": 90
+      },
+      {
+        "name": "Leadership",
+        "value": 75
+      },
+      {
+        "name": "Communication",
+        "value": 80
+      },
+      {
+        "name": "Mentorship",
+        "value": 60
+      }
+    ]
+  }
+]
