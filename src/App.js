@@ -7,7 +7,7 @@ import { CssBaseline, Divider, IconButton, Drawer } from "@material-ui/core";
 import Icon from "./components/Icon";
 import AppBar from "./components/AppBar";
 //import Footer from './components/Footer';
-import MainContentArea from "./components/MainContentArea";
+import Main from "./components/Main";
 import Menu from "./components/Menu";
 
 // Hooks
@@ -75,11 +75,9 @@ function App() {
           />
         </Drawer>
 
-        <MainContentArea
+        <Main
           title={structure[currentPageIndex].title}
           icon={structure[currentPageIndex].icon}
-          content={structure[currentPageIndex].componentName}
-          currentPageIndex={currentPageIndex}
           prevItem={
             currentPageIndex > 0 && structure[currentPageIndex - 1].title
           }
@@ -87,8 +85,11 @@ function App() {
             currentPageIndex < structure.length - 1 &&
             structure[currentPageIndex + 1].title
           }
-          onPageChange={(pageIndex) => {
-            setCurrentPageIndex(pageIndex);
+          onPrevClick={() => {
+            setCurrentPageIndex(currentPageIndex - 1);
+          }}
+          onNextClick={() => {
+            setCurrentPageIndex(currentPageIndex + 1);
           }}
           className={classes.content}
         />

@@ -1,14 +1,25 @@
 import React from "react";
 
-import Paper from "@material-ui/core/Paper";
-//import Container from '@material-ui/core/Container';
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core";
-import Divider from "@material-ui/core/Divider";
-import Button from "@material-ui/core/Button";
+import {
+  Paper,
+  Typography,
+  makeStyles,
+  Divider,
+  Button,
+} from "@material-ui/core";
 
-import Content from "../components/Content";
-import Icon from "../components/Icon";
+import {
+  ProfessionalAchievements,
+  References,
+  Links,
+  PointsOfInterest,
+  Education,
+  Skills,
+  Objective,
+  WorkHistory,
+} from "../content";
+
+import Icon from "./Icon";
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -35,25 +46,40 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
 }));
 
-function MainContentArea({
+function getContentComponent(title) {
+  console.log("getContentComponent", title);
+  switch (title) {
+    case "Objective":
+      return <Objective />;
+    case "Professional Achievements":
+      return <ProfessionalAchievements />;
+    case "Experience":
+      return <WorkHistory />;
+    case "Skills":
+      return <Skills />;
+    case "Education":
+      return <Education />;
+    case "Points of Interest":
+      return <PointsOfInterest />;
+    case "Links":
+      return <Links />;
+    case "References":
+      return <References />;
+    default:
+      return <Objective />;
+  }
+}
+
+function Main({
   icon,
-  content,
   title,
   prevItem,
   nextItem,
   className = "",
-  currentPageIndex = 0,
-  onPageChange,
+  onPrevClick,
+  onNextClick,
 }) {
   const classes = useStyles();
-
-  function prev() {
-    onPageChange(currentPageIndex - 1);
-  }
-
-  function next() {
-    onPageChange(currentPageIndex + 1);
-  }
 
   return (
     <div className={className}>
@@ -72,19 +98,19 @@ function MainContentArea({
           </Typography>
         </div>
         <Divider />
-        <Content name={content} className={classes.content} />
+        <div className={classes.content}>{getContentComponent(title)}</div>
         <Divider />
 
         <div className={classes.buttonBlock}>
           {prevItem && (
-            <Button className={classes.leftButton} onClick={prev}>
+            <Button className={classes.leftButton} onClick={onPrevClick}>
               <Icon name="ChevronLeft" />
               {prevItem}
             </Button>
           )}
           <div className={classes.spacer} />
           {nextItem && (
-            <Button className={classes.rightButton} onClick={next}>
+            <Button className={classes.rightButton} onClick={onNextClick}>
               {nextItem}
               <Icon name="ChevronRight" />
             </Button>
@@ -95,4 +121,4 @@ function MainContentArea({
   );
 }
 
-export default MainContentArea;
+export default Main;

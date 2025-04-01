@@ -1,37 +1,30 @@
 [
     {
       "title" : "Objective",
-      "componentName" : "Objective",
       "icon": "Flag"
     },
     {
       "title" : "Skills",
-      "componentName" : "Skills",
       "icon": "Extension"
     },
     {
       "title" : "Experience",
-      "componentName" : "WorkHistory",
       "icon": "Work"
     },
     {
       "title" : "Education",
-      "componentName" : "Education",
       "icon" : "School"
     },
     {
       "title" : "Points of Interest",
-      "componentName" : "PointsOfInterest",
       "icon": "Info"
     },
     {
       "title" : "Links",
-      "componentName" : "Links",
       "icon" : "Links"
     },
     {
       "title" : "References",
-      "componentName" : "References",
       "icon": "Contacts"
     }
   ]

@@ -55,14 +55,14 @@ const SkillCard = ({
         <div className={classes.progress}>
           <CircularProgress
             className={classes.progressBG}
-            variant="static"
+            variant="determinate"
             size={progressSize}
             thickness={6}
             value={100}
           />
           <CircularProgress
             className={classes.progressOL}
-            variant="static"
+            variant="determinate"
             size={progressSize}
             thickness={6}
             value={internalValue}

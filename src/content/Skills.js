@@ -1,11 +1,10 @@
 import { Fragment } from "react";
 
-import { Divider, Grid, List, ListItem } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import SkillCard from "../components/SkillCard";
 
 const skills = require("../data/skills");
-console.log(skills);
 
 const useStyles = makeStyles((theme) => ({
   group: {
