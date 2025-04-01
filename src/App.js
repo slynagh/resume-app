@@ -27,10 +27,6 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(initialWidth > 640);
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
 
-  function update(toPageIndex) {
-    setCurrentPageIndex(toPageIndex);
-  }
-
   function handleDrawerToggle() {
     setMenuOpen(!menuOpen);
   }
@@ -73,7 +69,9 @@ function App() {
           <Menu
             structure={structure}
             currentPageIndex={currentPageIndex}
-            updateApp={update}
+            updateApp={(toPageIndex) => {
+              setCurrentPageIndex(toPageIndex);
+            }}
           />
         </Drawer>
 
@@ -89,7 +87,9 @@ function App() {
             currentPageIndex < structure.length - 1 &&
             structure[currentPageIndex + 1].title
           }
-          onPageChange={update}
+          onPageChange={(pageIndex) => {
+            setCurrentPageIndex(pageIndex);
+          }}
           className={classes.content}
         />
       </div>

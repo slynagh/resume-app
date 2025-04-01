@@ -35,22 +35,24 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
 }));
 
-function MainContentArea(props) {
+function MainContentArea({
+  icon,
+  content,
+  title,
+  prevItem,
+  nextItem,
+  className = "",
+  currentPageIndex = 0,
+  onPageChange,
+}) {
   const classes = useStyles();
-  const iconName = props.icon;
-  const contentName = props.content;
-  const title = props.title || "Title Goes Here!!";
-  const className = props.className || "";
-  const currentPageIndex = props.currentPageIndex || 0;
-  const prevItem = props.prevItem;
-  const nextItem = props.nextItem;
 
   function prev() {
-    props.onPageChange(currentPageIndex - 1);
+    onPageChange(currentPageIndex - 1);
   }
 
   function next() {
-    props.onPageChange(currentPageIndex + 1);
+    onPageChange(currentPageIndex + 1);
   }
 
   return (
@@ -59,7 +61,7 @@ function MainContentArea(props) {
 
       <Paper className={classes.padded}>
         <div className={classes.contentHeader}>
-          <Icon className={classes.contentHeaderIcon} name={iconName} />
+          <Icon className={classes.contentHeaderIcon} name={icon} />
           <Typography
             className={classes.contentHeaderText}
             variant="h2"
@@ -70,7 +72,7 @@ function MainContentArea(props) {
           </Typography>
         </div>
         <Divider />
-        <Content name={contentName} className={classes.content} />
+        <Content name={content} className={classes.content} />
         <Divider />
 
         <div className={classes.buttonBlock}>
