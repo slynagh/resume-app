@@ -6,6 +6,7 @@ import {
   makeStyles,
   Divider,
   Button,
+  Container,
 } from "@material-ui/core";
 
 import {
@@ -16,7 +17,7 @@ import {
   Education,
   Skills,
   Objective,
-  WorkHistory,
+  Experience,
 } from "../content";
 
 import Icon from "./Icon";
@@ -28,12 +29,20 @@ const useStyles = makeStyles((theme) => ({
   padded: {
     padding: theme.spacing(3),
   },
+  mb2: {
+    marginBottom: theme.spacing(2),
+  },
   contentHeader: {
     display: "flex",
     fontSize: "2.5rem",
+    gap: theme.spacing(2),
   },
-  contentHeaderIcon: { fontSize: "inherit", marginRight: theme.spacing(3) },
-  contentHeaderText: { fontSize: "inherit" },
+  contentHeaderIcon: {
+    fontSize: "inherit",
+    top: "0.125em",
+    position: "relative",
+  },
+  pageTitle: { fontSize: "inherit", fontWeight: 600 },
   buttonBlock: {
     margin: theme.spacing(3, 0, 0),
     display: "flex",
@@ -54,7 +63,7 @@ const Content = ({ title }) => {
     case "Professional Achievements":
       return <ProfessionalAchievements />;
     case "Experience":
-      return <WorkHistory />;
+      return <Experience />;
     case "Skills":
       return <Skills />;
     case "Education":
@@ -85,40 +94,42 @@ function Main({
     <div className={className}>
       <div className={classes.toolbar} />
 
-      <Paper className={classes.padded}>
-        <div className={classes.contentHeader}>
-          <Icon className={classes.contentHeaderIcon} name={icon} />
-          <Typography
-            className={classes.contentHeaderText}
-            variant="h2"
-            component="h2"
-            gutterBottom
-          >
-            {title}
-          </Typography>
-        </div>
-        <Divider />
-        <div className={classes.content}>
-          <Content title={title} />
-        </div>
-        <Divider />
+      <Container>
+        <Paper className={classes.padded}>
+          <div className={classes.contentHeader}>
+            <Icon className={classes.contentHeaderIcon} name={icon} />
+            <Typography
+              className={classes.pageTitle}
+              variant="h2"
+              component="h2"
+              gutterBottom
+            >
+              {title}
+            </Typography>
+          </div>
+          <Divider className={classes.mb2} />
+          <div className={classes.content}>
+            <Content title={title} />
+          </div>
+          <Divider />
 
-        <div className={classes.buttonBlock}>
-          {prevItem && (
-            <Button className={classes.leftButton} onClick={onPrevClick}>
-              <Icon name="ChevronLeft" />
-              {prevItem}
-            </Button>
-          )}
-          <div className={classes.spacer} />
-          {nextItem && (
-            <Button className={classes.rightButton} onClick={onNextClick}>
-              {nextItem}
-              <Icon name="ChevronRight" />
-            </Button>
-          )}
-        </div>
-      </Paper>
+          <div className={classes.buttonBlock}>
+            {prevItem && (
+              <Button className={classes.leftButton} onClick={onPrevClick}>
+                <Icon name="ChevronLeft" />
+                {prevItem}
+              </Button>
+            )}
+            <div className={classes.spacer} />
+            {nextItem && (
+              <Button className={classes.rightButton} onClick={onNextClick}>
+                {nextItem}
+                <Icon name="ChevronRight" />
+              </Button>
+            )}
+          </div>
+        </Paper>
+      </Container>
     </div>
   );
 }

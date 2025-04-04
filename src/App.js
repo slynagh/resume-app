@@ -91,7 +91,7 @@ function App() {
           onNextClick={() => {
             setCurrentPageIndex(currentPageIndex + 1);
           }}
-          className={classes.content}
+          className={classes.main}
         />
       </div>
     </Fragment>
