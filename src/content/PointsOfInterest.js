@@ -1,20 +1,21 @@
+import { Typography } from "@material-ui/core";
+
 const PointsOfInterest = () => (
   <>
-    <p>
-      I’m a passionate software engineer with a strong focus on web development
-      and cloud technologies. I have a keen interest in DevOps, CI/CD, and
-      automation.
-    </p>
-
-    <p>
-      I’m also interested in the latest trends in web development, including
-      React, Node.js, and serverless architectures.
-    </p>
-
-    <p>
-      In my spare time, I enjoy contributing to open source projects and
-      learning new technologies.
-    </p>
+    <Typography variant="body1" component="p" gutterBottom>
+      I have a passion for music and I’ve played drums, guitar and bass in many
+      bands over the years. most notably Brisbane cult rock legends Giants of
+      Science, with whom I’ve written and recorded 3 albums, 4 EPs, and toured
+      Australia countless times. I was also a member of Mendix’s in-house covers
+      band during my time with the company.
+    </Typography>
+    <Typography variant="body1" component="p" gutterBottom>
+      I’m an EU citizen with dual Australian / Dutch nationality and a Dad to 2
+      beautiful girls.
+    </Typography>
+    <Typography variant="body1" component="p" gutterBottom>
+      I love travelling, good food, cricket and coffee.
+    </Typography>
   </>
 );
 
