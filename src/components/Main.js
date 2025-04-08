@@ -32,17 +32,15 @@ const useStyles = makeStyles((theme) => ({
   mb2: {
     marginBottom: theme.spacing(2),
   },
-  contentHeader: {
+  pageTitle: {
     display: "flex",
-    fontSize: "2.5rem",
     gap: theme.spacing(2),
   },
   contentHeaderIcon: {
     fontSize: "inherit",
-    top: "0.125em",
+    top: "0.09em",
     position: "relative",
   },
-  pageTitle: { fontSize: "inherit", fontWeight: 600 },
   buttonBlock: {
     margin: theme.spacing(3, 0, 0),
     display: "flex",
@@ -96,17 +94,16 @@ function Main({
 
       <Container>
         <Paper className={classes.padded}>
-          <div className={classes.contentHeader}>
+          <Typography
+            className={classes.pageTitle}
+            variant="h2"
+            component="h2"
+            gutterBottom
+          >
             <Icon className={classes.contentHeaderIcon} name={icon} />
-            <Typography
-              className={classes.pageTitle}
-              variant="h2"
-              component="h2"
-              gutterBottom
-            >
-              {title}
-            </Typography>
-          </div>
+            {title}
+          </Typography>
+
           <Divider className={classes.mb2} />
           <div className={classes.content}>
             <Content title={title} />
