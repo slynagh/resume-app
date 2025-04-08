@@ -122,9 +122,8 @@ const Experience = () => {
 
       <p>
         I was part of Australian College of Rural and Remote Medicine’s Digital
-        Solutions team.
+        Solutions team. Achievements include:{" "}
       </p>
-      <p> Achievements include: </p>
 
       <ul>
         <li>
