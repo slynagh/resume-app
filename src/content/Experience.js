@@ -110,7 +110,12 @@ const Experience = () => {
           "Mendix Platform and Model SDKs",
           "APIs",
         ].map((item) => (
-          <Chip key={item} label={item} className={classes.chip} />
+          <Chip
+            key={item}
+            label={item}
+            className={classes.chip}
+            component="span"
+          />
         ))}
       </p>
 
@@ -157,7 +162,12 @@ const Experience = () => {
           "ActionScript",
           "Adobe AIR",
         ].map((item) => (
-          <Chip key={item} label={item} className={classes.chip} />
+          <Chip
+            key={item}
+            label={item}
+            className={classes.chip}
+            component="span"
+          />
         ))}
       </p>
 
@@ -182,7 +192,12 @@ const Experience = () => {
           "Flash",
           "Pencil and Paper",
         ].map((item) => (
-          <Chip key={item} label={item} className={classes.chip} />
+          <Chip
+            key={item}
+            label={item}
+            className={classes.chip}
+            component="span"
+          />
         ))}
       </p>
       <Divider className={classes.divider} />

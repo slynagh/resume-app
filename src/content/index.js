@@ -6,3 +6,4 @@ export { default as PointsOfInterest } from "./PointsOfInterest";
 export { default as Links } from "./Links";
 export { default as References } from "./References";
 export { default as ProfessionalAchievements } from "./ProfessionalAchievements";
+export { default as About } from "./About";

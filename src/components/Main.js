@@ -18,6 +18,7 @@ import {
   Skills,
   Objective,
   Experience,
+  About,
 } from "../content";
 
 import Icon from "./Icon";
@@ -54,7 +55,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Content = ({ title }) => {
-  console.log("getContentComponent", title);
   switch (title) {
     case "Objective":
       return <Objective />;
@@ -72,6 +72,8 @@ const Content = ({ title }) => {
       return <Links />;
     case "References":
       return <References />;
+    case "About this app":
+      return <About />;
     default:
       return <Objective />;
   }
