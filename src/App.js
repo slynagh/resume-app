@@ -6,7 +6,6 @@ import { CssBaseline, Divider, IconButton, Drawer } from "@material-ui/core";
 //Custom Components
 import Icon from "./components/Icon";
 import AppBar from "./components/AppBar";
-//import Footer from './components/Footer';
 import Main from "./components/Main";
 import Menu from "./components/Menu";
 

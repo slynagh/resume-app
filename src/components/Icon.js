@@ -48,7 +48,6 @@ function Icon(props) {
       case "Build":
         return IconBuild;
       default:
-        // return require(`@material-ui/icons/${name}`);
         return IconFlag; // default icon
     }
   })(props.name);
